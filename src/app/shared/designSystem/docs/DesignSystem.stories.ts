@@ -114,7 +114,6 @@ Variation        | Palette Color
 -----------------|--------------
 brand-primary   | primary-2-100
 brand-secondary | secondary-1-100
-brand-tertiary  | primary-1-020
 brand-danger    | tertiary-1-100
 brand-warn      | tertiary-2-100
 brand-success   | tertiary-3-100
