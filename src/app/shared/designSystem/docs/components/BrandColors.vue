@@ -19,8 +19,8 @@ export default {
   components: { VueHeadline },
   computed: {
     colorSections() {
-      const sections = {};
-      const arr = [];
+      const sections: any = {};
+      const arr: any[] = [];
 
       Object.keys(this.$style).forEach((key: string) => {
         const split = key.split('-');
@@ -51,7 +51,9 @@ export default {
       const b = parseInt(hex.substr(5, 2), 16);
       const yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-      if (isNaN(yiq)) {
+      if (hex === 'Black') {
+        return '#fff';
+      } else if (hex === '#fff') {
         return '#000';
       }
 
