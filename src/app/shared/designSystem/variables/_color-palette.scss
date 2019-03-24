@@ -7,29 +7,16 @@ $palette-colors: (
   'black': #010b0a,
 );
 
-$palette-opacity: (
-  'light': 0.6,
-  'dark': 0.4,
-);
-
 @function palette-color($key: 'primary') {
   @return map-get($palette-colors, $key);
 }
 
+// 0-100 tints
+// 100 - 200 shades
 @function palette-color-level($color-name: 'primary', $level: 100) {
   $color: palette-color($color-name);
   $color-base: if($level > 100, black, white);
   $color-level: if($level > 100, $level - 100, 100 - $level);
 
   @return mix($color-base, $color, $color-level);
-}
-
-@function palette-color-alpha($name: 'primary', $opacity: 0) {
-  $color: palette-color($name);
-
-  @if map-key-exists(palette-opacity, $opacity) {
-    $opacity: map-get(palette-opacity, $opacity);
-  }
-
-  @return rgba($color, $opacity);
 }

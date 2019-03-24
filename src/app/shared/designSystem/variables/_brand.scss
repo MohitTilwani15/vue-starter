@@ -21,7 +21,7 @@ $brand-warning: palette-color-level('yellow', 100);
 $brand-danger: palette-color-level('red', 100);
 
 /* Background Colors */
-$brand-bg-color: palette-color-level('black', 0);
+$brand-bg-color: palette-color-level('black', 2);
 $brand-bg-color-variant: palette-color-level('black', 5);
 $brand-bg-color-inverse: palette-color-level('black', 100);
 $brand-bg-color-variant-inverse: palette-color-level('black', 80);
@@ -29,17 +29,22 @@ $brand-bg-color-variant-inverse: palette-color-level('black', 80);
 /* Text Colors */
 $brand-text-color: palette-color-level('black', 100);
 $brand-text-secondary-color: palette-color-level('black', 40);
-$brand-text-color-inverse: palette-color-level('black', 0);
+$brand-text-color-inverse: palette-color-level('black', 2);
 $brand-text-secondary-color-inverse: palette-color-level('black', 40);
 
-/* Links */
+/* Link Color */
 $brand-link-color: palette-color-level('sea', 100);
 $brand-link-hover-color: palette-color-level('sea', 120);
 
-/* Borders */
+/* Border Colors */
 $brand-border-color: palette-color-level('black', 15);
 $brand-border-color-inverse: palette-color-level('black', 80);
 $brand-border-radius: $space-xxs;
+
+/* Box Shadows */
+$brand-shadow-sm: 0 1px 1px 0 rgba(18, 19, 21, 0.12);
+$brand-shadow-md: 0 -1px 2px 0 rgba(18, 19, 21, 0.12), 0 2px 4px 0 rgba(18, 19, 21, 0.12);
+$brand-shadow-lg: 0 0 4px 0 rgba(18, 19, 21, 0.12), 0 4px 12px 0 rgba(18, 19, 21, 0.12);
 
 /* Animation Language */
 $brand-transition-duration: 250ms;
@@ -47,7 +52,7 @@ $brand-easing-curve: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 $brand-fade-animation-transition: opacity $brand-transition-duration * 4 $brand-easing-curve;
 
 /* Utils */
-@function foreground-color($bgcolor, $threshold: 0.33) {
+@function foreground-color($bgcolor, $threshold: 0.3355) {
   $lightness: lightness($bgcolor) / 100%;
   @return if($lightness < $threshold, $brand-text-color-inverse, $brand-text-color);
 }
