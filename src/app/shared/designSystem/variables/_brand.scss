@@ -47,7 +47,7 @@ $brand-easing-curve: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 $brand-fade-animation-transition: opacity $brand-transition-duration * 4 $brand-easing-curve;
 
 /* Utils */
-@function foreground-color($bgcolor, $threshold: 0.33) {
+@function foreground-color($bgcolor, $threshold: 0.3355) {
   $lightness: lightness($bgcolor) / 100%;
   @return if($lightness < $threshold, $brand-text-color-inverse, $brand-text-color);
 }
