@@ -19,8 +19,8 @@ export default {
   components: { VueHeadline },
   computed: {
     colorSections() {
-      const sections = {};
-      const arr = [];
+      const sections: any = {};
+      const arr: any[] = [];
 
       Object.keys(this.$style).forEach((key: string) => {
         const split = key.split('-');
