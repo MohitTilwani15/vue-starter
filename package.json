@@ -42,6 +42,7 @@
     "release:minor": "vuesion release --minor --silent",
     "release:patch": "vuesion release --patch --silent",
     "build": "vuesion build",
+    "build:dark": "vuesion build --theme dark",
     "build:analyze": "vuesion build --analyze",
     "build:spa": "vuesion build --spa",
     "start": "node ./dist/server/server.js",
